@@ -23,6 +23,8 @@ for (iticker in seq(1, length(betaData))) {
 write.csv(names(betaData), file="allTickers.csv")
 
 for (iticker in seq(1, length(minuteData))) {
-  write.csv(minuteData[iticker], file=paste(c(strsplit(names(minuteData)[iticker], " ")[[1]][1], ".csv"), collapse=""))
+  thisTicker <- minuteData[[iticker]]
+  thisTicker$date <- as.character(as.Date(as.character(thisTicker$date), format="%m/%d/%Y"))
+  write.csv(thisTicker, file=paste(c(strsplit(names(minuteData)[iticker], " ")[[1]][1], ".csv"), collapse=""))
 }
 write.csv(names(minuteData), file="allTickers.csv")
