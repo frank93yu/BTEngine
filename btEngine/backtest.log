@@ -1,0 +1,255 @@
+2017-11-25 20:31:53.173258: Calendar created on trading days from 2015-01-02 to 2016-12-30.2017-11-25 20:33:58.677398: Calendar created on trading days from 2015-01-02 to 2016-12-30.2017-11-25 20:34:32.411770: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 20:34:38.277852: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 20:38:19.181969: Calendar construction crashed with SPY 2015-01-01 2015-01-01.
+2017-11-25 22:29:47.544646: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 22:29:56.869505: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 22:34:44.490101: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 22:39:00.123552: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 22:56:24.293260: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:09:36.235108: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:16:52.466699: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:24:18.596512: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:25:12.427308: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:26:01.941742: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:27:45.726594: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:32:20.311960: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:38:41.628761: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:39:07.299661: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:39:41.675148: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:40:13.687594: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:42:22.768306: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:43:12.017654: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:44:17.462934: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:47:47.033219: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:47:56.466636: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:48:05.855187: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:49:58.619487: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:51:54.783266: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:53:07.238166: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:53:41.119127: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:54:04.365817: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:56:38.241884: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:56:38.671062: Data for BF not available!
+2017-11-25 23:56:38.816186: Data for BMW not available!
+2017-11-25 23:56:39.220927: Data for COH not available!
+2017-11-25 23:56:39.299814: Data for DAI not available!
+2017-11-25 23:56:39.918115: Data for FND not available!
+2017-11-25 23:56:40.904746: Data for LTD not available!
+2017-11-25 23:56:41.738982: Data for PLKI not available!
+2017-11-25 23:56:41.739234: Data for PZZA not available!
+2017-11-25 23:56:41.739375: Data for RGC not available!
+2017-11-25 23:56:41.739474: Data for RPAI not available!
+2017-11-25 23:56:41.739551: Data for PSA not available!
+2017-11-25 23:56:41.739620: Data for QSR not available!
+2017-11-25 23:56:41.739689: Data for RH not available!
+2017-11-25 23:56:41.739756: Data for RPT not available!
+2017-11-25 23:56:41.739823: Data for RAD not available!
+2017-11-25 23:56:41.739889: Data for SBH not available!
+2017-11-25 23:56:41.739956: Data for RHP not available!
+2017-11-25 23:56:41.740021: Data for RRGB not available!
+2017-11-25 23:56:41.740087: Data for RAI not available!
+2017-11-25 23:56:41.740161: Data for SBUX not available!
+2017-11-25 23:56:41.740230: Data for RL not available!
+2017-11-25 23:56:41.740295: Data for RTN not available!
+2017-11-25 23:56:41.740360: Data for RCII not available!
+2017-11-25 23:56:41.740423: Data for RLGY not available!
+2017-11-25 23:56:41.740488: Data for SCI not available!
+2017-11-25 23:56:41.740552: Data for SCSS not available!
+2017-11-25 23:56:41.740615: Data for RMAX not available!
+2017-11-25 23:56:41.740688: Data for REG not available!
+2017-11-25 23:56:41.740753: Data for RUSHA not available!
+2017-11-25 23:56:41.740818: Data for SCVL not available!
+2017-11-25 23:56:41.740883: Data for SHAK not available!
+2017-11-25 23:56:41.740948: Data for ROST not available!
+2017-11-25 23:56:41.741013: Data for RUTH not available!
+2017-11-25 23:56:41.741079: Data for SEAS not available!
+2017-11-25 23:56:41.741144: Data for SHLD not available!
+2017-11-25 23:56:41.741209: Data for SNA not available!
+2017-11-25 23:56:41.741275: Data for SFM not available!
+2017-11-25 23:56:41.741339: Data for SAH not available!
+2017-11-25 23:56:41.741419: Data for SFS not available!
+2017-11-25 23:56:41.741497: Data for SHW not available!
+2017-11-25 23:56:41.741563: Data for SONC not available!
+2017-11-25 23:56:41.741626: Data for SAVE not available!
+2017-11-25 23:56:41.741694: Data for SVU not available!
+2017-11-25 23:56:41.741759: Data for SIG not available!
+2017-11-25 23:56:41.741823: Data for TFM not available!
+2017-11-25 23:56:41.741890: Data for SPG not available!
+2017-11-25 23:56:41.741956: Data for SWY not available!
+2017-11-25 23:56:41.742022: Data for SIX not available!
+2017-11-25 23:56:41.742089: Data for TGT not available!
+2017-11-25 23:56:41.742155: Data for SPLS not available!
+2017-11-25 23:56:41.742220: Data for SKS not available!
+2017-11-25 23:56:41.742305: Data for SYK not available!
+2017-11-25 23:56:41.742373: Data for THC not available!
+2017-11-25 23:56:41.742438: Data for SPTN not available!
+2017-11-25 23:56:41.742504: Data for SKT not available!
+2017-11-25 23:56:41.742569: Data for TA not available!
+2017-11-25 23:56:41.742639: Data for SPWH not available!
+2017-11-25 23:56:41.742715: Data for THO not available!
+2017-11-25 23:56:41.742782: Data for TACO not available!
+2017-11-25 23:56:41.742849: Data for SMRT not available!
+2017-11-25 23:56:41.742916: Data for SSI not available!
+2017-11-25 23:56:41.742983: Data for TM not available!
+2017-11-25 23:56:41.743052: Data for TIF not available!
+2017-11-25 23:56:41.743118: Data for TCO not available!
+2017-11-25 23:56:41.743186: Data for STAY not available!
+2017-11-25 23:56:41.743255: Data for TCS not available!
+2017-11-25 23:56:41.743322: Data for TSCO not available!
+2017-11-25 23:56:41.743389: Data for TITN not available!
+2017-11-25 23:56:41.743456: Data for UBA not available!
+2017-11-25 23:56:41.743523: Data for TEL not available!
+2017-11-25 23:56:41.743590: Data for UE not available!
+2017-11-25 23:56:41.743657: Data for TSLA not available!
+2017-11-25 23:56:41.743733: Data for TJX not available!
+2017-11-25 23:56:41.743802: Data for UTX not available!
+2017-11-25 23:56:41.743872: Data for TTS not available!
+2017-11-25 23:56:41.743940: Data for UHAL not available!
+2017-11-25 23:56:41.744010: Data for TLRD not available!
+2017-11-25 23:56:41.744079: Data for VA not available!
+2017-11-25 23:56:41.744148: Data for TUES not available!
+2017-11-25 23:56:41.744216: Data for UHS not available!
+2017-11-25 23:56:41.744284: Data for WBA not available!
+2017-11-25 23:56:41.744353: Data for VAL not available!
+2017-11-25 23:56:41.744421: Data for ULTA not available!
+2017-11-25 23:56:41.744492: Data for TWX not available!
+2017-11-25 23:56:41.744560: Data for VER not available!
+2017-11-25 23:56:41.744628: Data for WCC not available!
+2017-11-25 23:56:41.744696: Data for UPS not available!
+2017-11-25 23:56:41.744764: Data for VSI not available!
+2017-11-25 23:56:41.744833: Data for WEN not available!
+2017-11-25 23:56:41.744902: Data for TXRH not available!
+2017-11-25 23:56:41.744971: Data for WAB not available!
+2017-11-25 23:56:41.745040: Data for URBN not available!
+2017-11-25 23:56:41.745116: Data for WAG not available!
+2017-11-25 23:56:41.745185: Data for WFM not available!
+2017-11-25 23:56:41.745253: Data for UAL not available!
+2017-11-25 23:56:41.745322: Data for WING not available!
+2017-11-25 23:56:41.745391: Data for WPG not available!
+2017-11-25 23:56:41.745461: Data for URI not available!
+2017-11-25 23:56:41.745530: Data for WAT not available!
+2017-11-25 23:56:41.745599: Data for WMK not available!
+2017-11-25 23:56:41.745670: Data for WRE not available!
+2017-11-25 23:56:41.745740: Data for X not available!
+2017-11-25 23:56:41.745809: Data for WMT not available!
+2017-11-25 23:56:41.745877: Data for WRI not available!
+2017-11-25 23:56:41.745947: Data for XOM not available!
+2017-11-25 23:56:41.746018: Data for WOOF not available!
+2017-11-25 23:56:41.746087: Data for WSM not available!
+2017-11-25 23:56:41.746155: Data for XYL not available!
+2017-11-25 23:56:41.746225: Data for WSR not available!
+2017-11-25 23:56:41.746311: Data for YUM not available!
+2017-11-25 23:56:41.746383: Data for ZOES not available!
+2017-11-25 23:56:41.746452: Data for WTW not available!
+2017-11-25 23:56:41.746522: Data for ZUMZ not available!
+2017-11-25 23:56:41.746591: Data for WYN not available!
+2017-11-25 23:56:41.746661: Data for SPY not available!
+2017-11-25 23:56:41.746730: Data for WYNN not available!
+2017-11-25 23:56:41.746800: Data for XRT not available!
+2017-11-25 23:57:05.001761: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:57:05.288601: Data for BF not available!
+2017-11-25 23:57:05.385317: Data for BMW not available!
+2017-11-25 23:57:05.665419: Data for COH not available!
+2017-11-25 23:57:05.718259: Data for DAI not available!
+2017-11-25 23:57:06.120080: Data for FND not available!
+2017-11-25 23:57:06.784276: Data for LTD not available!
+2017-11-25 23:57:07.521242: Data for SCSS not available!
+2017-11-25 23:58:25.092352: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:58:25.381462: Data for BF not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-25 23:58:25.481304: Data for BMW not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-25 23:58:25.767947: Data for COH not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-25 23:58:25.823118: Data for DAI not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-25 23:58:26.234636: Data for FND not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-25 23:58:26.913303: Data for LTD not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-25 23:58:27.655469: Data for SCSS not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-25 23:59:32.777721: New back-test created!----------------------------------------------------
+2017-11-25 23:59:32.795056: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-25 23:59:33.090432: Data for BF not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-25 23:59:33.189543: Data for BMW not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-25 23:59:33.480021: Data for COH not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-25 23:59:33.535664: Data for DAI not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-25 23:59:33.951176: Data for FND not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-25 23:59:34.651556: Data for LTD not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-25 23:59:35.393689: Data for SCSS not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:03:16.147800: New back-test created!----------------------------------------------------
+2017-11-26 00:03:16.164879: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-26 00:03:16.457549: Data for BF not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:03:16.557062: Data for BMW not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:03:16.843632: Data for COH not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:03:16.897033: Data for DAI not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:03:17.311229: Data for FND not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:03:17.988513: Data for LTD not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:03:18.742787: Data for SCSS not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:04:10.800256: New back-test created!----------------------------------------------------
+2017-11-26 00:04:10.817980: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-26 00:05:57.029965: New back-test created!----------------------------------------------------
+2017-11-26 00:05:57.047278: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-26 00:08:36.779278: New back-test created!----------------------------------------------------
+2017-11-26 00:08:36.795975: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-26 00:08:57.620130: New back-test created!----------------------------------------------------
+2017-11-26 00:08:57.637525: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-26 00:09:26.962744: New back-test created!----------------------------------------------------
+2017-11-26 00:09:26.979859: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:27.715235: New back-test created!----------------------------------------------------
+2017-11-26 00:11:27.732200: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:28.019669: Data for BF not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:28.115593: Data for BMW not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:28.393191: Data for COH not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:28.446370: Data for DAI not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:28.846584: Data for FND not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:29.499119: Data for LTD not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:30.221542: Data for SCSS not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:43.812921: New back-test created!----------------------------------------------------
+2017-11-26 00:11:43.829821: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:44.120686: Data for BF not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:44.216680: Data for BMW not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:44.492368: Data for COH not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:44.544659: Data for DAI not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:44.937688: Data for FND not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:45.587245: Data for LTD not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:11:46.302891: Data for SCSS not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:12:03.008202: New back-test created!----------------------------------------------------
+2017-11-26 00:12:03.025679: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-26 00:12:03.315798: Data for BF not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:12:03.413898: Data for BMW not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:12:03.690600: Data for COH not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:12:03.745028: Data for DAI not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:12:04.145897: Data for FND not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:12:04.804452: Data for LTD not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:12:05.537719: Data for SCSS not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:30:21.665253: New back-test created!----------------------------------------------------
+2017-11-26 00:30:21.682210: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+2017-11-26 00:30:21.969314: Data for BF not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:30:22.068634: Data for BMW not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:30:22.351783: Data for COH not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:30:22.406649: Data for DAI not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:30:22.810342: Data for FND not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:30:23.472921: Data for LTD not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:30:24.210396: Data for SCSS not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:30:25.166550: Daily data is loaded successfully.
+2017-11-26 00:33:19.643981: New back-test created!----------------------------------------------------
+
+2017-11-26 00:33:19.662191: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+
+2017-11-26 00:33:19.966413: Data for BF not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:33:20.068474: Data for BMW not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:33:20.362826: Data for COH not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:33:20.418778: Data for DAI not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:33:20.832586: Data for FND not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:33:21.517184: Data for LTD not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:33:22.264432: Data for SCSS not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:33:23.233807: Daily data is loaded successfully.
+
+2017-11-26 00:34:40.896810: New back-test created!----------------------------------------------------
+
+2017-11-26 00:34:40.913763: Calendar created on trading days from 2015-01-02 to 2016-12-30.
+
+2017-11-26 00:34:41.197979: Data for BF not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:34:41.293994: Data for BMW not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:34:41.572084: Data for COH not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:34:41.624346: Data for DAI not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:34:42.027641: Data for FND not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:34:42.707411: Data for LTD not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:34:43.429789: Data for SCSS not available for time frame: 2015-01-02 to 2016-12-30.
+2017-11-26 00:34:44.377294: Daily data is loaded successfully.
+
