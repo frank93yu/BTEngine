@@ -29,7 +29,7 @@ def fetch_data_form(tickerList):
 
     for ticker in tickerList:
         temp = ticker.split()[0].replace("/", "_")
-        if(ticker.split()[0].replace("/", "_") in ["ALL", "ASC", "CALL", "FOR", "IN", "INT", "KEY", "KEYS", "LOCK", "LOOP", "MOD", "ON", "OK", "OUT", "TRUE"]):
+        if(ticker.split()[0].replace("/", "_") in ["ALL", "AS", "ASC", "CALL", "FOR", "IN", "INT", "KEY", "KEYS", "LOCK", "LOOP", "MOD", "ON", "OK", "OUT", "TRUE"]):
             temp = temp + "_"
         TABLES[temp] = (
         "CREATE TABLE `" + temp + "` ("

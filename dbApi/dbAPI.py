@@ -37,6 +37,9 @@ class MyDBApi_GeoMinute(MyDBApi):
     def query_by_datetime(self, info = {'ticker': 'APP', 'start_date': '2016-01-01', 'start_time': '09:00:00', \
     'end_date': '2016-02-01', 'end_time': '16:00:00', 'datatypes': ['date', 'open', 'close']}):
 
+        if info['ticker'] in ["ALL", "AS", "ASC", "CALL", "FOR", "IN", "INT", "KEY", "KEYS", "LOCK", "LOOP", "MOD", "ON", "OK", "OUT", "TRUE"]:
+            info['ticker'] = info['ticker'] + '_'
+
         datatypestr = ""
         for i_type in range(len(info['datatypes'])):
             datatypestr = datatypestr + info['datatypes'][i_type]
@@ -55,6 +58,9 @@ class MyDBApi_GeoDaily(MyDBApi):
 
     def query_by_date(self, info = {'ticker': 'AAP', 'start_date': '2016-01-01',\
     'end_date': '2016-02-01', 'datatypes': ['date', 'open', 'close']}):
+
+        if info['ticker'] in ["ALL", "AS", "ASC", "CALL", "FOR", "IN", "INT", "KEY", "KEYS", "LOCK", "LOOP", "MOD", "ON", "OK", "OUT", "TRUE"]:
+            info['ticker'] = info['ticker'] + '_'
 
         datatypestr = ""
         for i_type in range(len(info['datatypes'])):
