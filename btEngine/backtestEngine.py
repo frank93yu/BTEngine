@@ -34,9 +34,19 @@ class MyBacktestEngine():
         self.write_log("New back-test created!----------------------------------------------------\n")
         self.dailyPriceDB, self.minutePriceDB = initialize_DB_connection()
         self.ticker_universe = get_ticker_universe() # np.array of strings, containing all the tickers relevant
+
+        # initialized in create_calendar method
         self.calendar = None # list of datetime type, all trading days
         self.start_date, self.end_date = None, None # strings denoting actual time frame
-        self.allTickersDailyClose = None # dataframe of all the close prices of all tickers in the universe
+
+        # initialized in load_daily_close method
+        self.allTickersDailyCloseDF = None # dataframe of all the close prices of all tickers in the universe
+        self.ticker2index = None # A dict map ticker names to their corresponding column index in the numpy array below
+        self.allTickersDailyCloseNP = None # numpy array of all the close prices for all tickers, for better iteration speed
+
+        # initialized in initialize_positions method
+        self.cash_position, self.total_position = None, None # np array containing cash postion series
+        self.tickers_positions = None # np array containing tickers' postions serieses
 
     def create_calendar(self, start_date, end_date, benchmark_ticker='SPY'):
         # using the dates available for benchmark to create a gobal trading calendar
@@ -54,8 +64,10 @@ class MyBacktestEngine():
             self.write_log('Calendar construction crashed with ' + benchmark_ticker + ' ' + start_date + ' ' + end_date + '.\n')
             return(-1)
 
-    def load_daily_data(self):
-        # load daily data for relevant tickers in to memory
+    def load_daily_close(self):
+        # load daily data for relevant tickers in to memory for PnL tracking
+        # this method is useful in most cases, and PnL is mostly tracked on a daily bases
+        # data on more frequent time scale is quried on call if PnL is tracked daily
         try:
             print('Loading daily data...')
             tempTickerData = []
@@ -76,7 +88,13 @@ class MyBacktestEngine():
             calendar = pd.DataFrame(self.calendar)
             calendar.columns = ['date']
             calendar = calendar.set_index('date')
-            self.allTickersDailyClose = calendar.merge(allTickersData, how='inner', left_index=True, right_index=True)
+            self.allTickersDailyCloseDF = calendar.merge(allTickersData, how='inner', left_index=True, right_index=True)
+
+            tickerNames = list(self.allTickersDailyCloseDF.columns)
+            tickerNamesIndex = range(len(tickerNames))
+            self.ticker2index = dict(zip(tickerNames, tickerNamesIndex))
+
+            self.allTickersDailyCloseNP = self.allTickersDailyCloseDF.as_matrix()
             print('Daily data is loaded successfully.')
             self.write_log('Daily data is loaded successfully.\n')
             return(0)
@@ -85,7 +103,22 @@ class MyBacktestEngine():
             self.write_log('Daily data fail to load!\n')
             return(-1)
 
+    def initialize_positions(self, principle):
+        # initialize all kinds of positions
+        # zero level positions
+        self.cash_position = np.zeros(self.allTickersDailyCloseNP.shape[0] + 1)
+        self.cash_position[0] = principle
+        self.tickers_positions = np.zeros((self.allTickersDailyCloseNP.shape[0] + 1, self.allTickersDailyCloseNP.shape[0]))
+        self.total_position = np.zeros(self.allTickersDailyCloseNP.shape[0] + 1)
+        self.total_position[0] = principle
+        # first difference level positions
+        self.cash_position_taken = np.zeros(self.allTickersDailyCloseNP.shape[0])
+        self.tickers_positions_taken = np.zeros(self.allTickersDailyCloseNP.shape)
 
+    def run(self):
+        # iterate through the calendar
+        for iDate in range(len(self.calendar)):
+            pass
 
     def write_log(self, log):
 
@@ -95,5 +128,6 @@ class MyBacktestEngine():
 
 a = MyBacktestEngine()
 a.create_calendar('2015-01-01', '2017-01-01')
-a.load_daily_data()
-print("yoyo")
+a.load_daily_close()
+a.initialize_positions(1000000)
+a.allTickersDailyCloseDF.to_csv("/home/frank/Desktop/test.csv")
