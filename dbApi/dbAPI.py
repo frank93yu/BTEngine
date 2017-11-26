@@ -20,11 +20,13 @@ class MyDBApi():
 
         self.cnx = msql.connect(**self.config)
         self.cursor = self.cnx.cursor()
+        print ("Connection to database " + self.config["database"] + " is established.")
 
     def quit(self):
 
         self.cursor.close()
         self.cnx.close()
+        print ("Connection to database " + self.config["database"] + " is closed.")
 
 class MyDBApi_GeoMinute(MyDBApi):
     # subclass for minute data
