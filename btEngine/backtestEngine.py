@@ -112,7 +112,7 @@ class MyBacktestEngine():
         # zero level positions
         self.cash_position = np.zeros(self.allTickersDailyCloseNP.shape[0] + 1)
         self.cash_position[0] = principle
-        self.tickers_positions = np.zeros((self.allTickersDailyCloseNP.shape[0] + 1, self.allTickersDailyCloseNP.shape[0]))
+        self.tickers_positions = np.zeros((self.allTickersDailyCloseNP.shape[0] + 1, self.allTickersDailyCloseNP.shape[1]))
         self.total_position = np.zeros(self.allTickersDailyCloseNP.shape[0] + 1)
         self.total_position[0] = principle
         # first difference level positions
@@ -121,10 +121,18 @@ class MyBacktestEngine():
 
     def run(self):
         # iterate through the calendar
+        dailyStrategy = Strategy()
         for iDate in range(len(self.calendar)):
-            pass
+            print(self.cash_position[iDate])
+            #print(self.tickers_positions[iDate])
+            print(self.total_position[iDate])
+            iOrderBatch = dailyStrategy.run(self.calendar[iDate])
+            self.place_orders_batch(iDate, iOrderBatch, True)
+            self.daily_settlement(iDate)
+
 
     def place_orders_batch(self, i_date, order_batch, use_minute_data=False):
+
         for iOrder in order_batch:
             iTicker = iOrder['ticker']
             iOrderAmount = iOrder['nshares']
@@ -134,7 +142,12 @@ class MyBacktestEngine():
                 iStartTime = iOrder['start_time']
                 iEndTime = iOrder['end_time']
                 iCost = self.get_minute_mean(iTicker, str(self.calendar[i_date]), '09:00:00', str(self.calendar[i_date]), '16:00:00')
-
+            if iCost == None:
+                iCost = 0
+                print('Fatal data missing for ' + iTicker + ' on ' + str(self.calendar[i_date]) + ', trade aborted.')
+            self.cash_position_taken[i_date] -= iCost*iOrderAmount
+            self.tickers_positions_taken[i_date][self.ticker2index[iTicker]] += iOrderAmount
+            print(str(self.calendar[i_date]) + ': ' + str(iOrderAmount) + ' shares of ' + iTicker + ' at ' + str(iCost) + '.')
 
     def get_minute_mean(self, ticker, start_date, start_time, end_date, end_time):
         self.minutePriceDB.query_by_datetime({'ticker': ticker, 'start_date': start_date, 'start_time': start_time, \
@@ -142,16 +155,36 @@ class MyBacktestEngine():
         minuteClosePrice = np.array([close for close in self.minutePriceDB.cursor])
         return minuteClosePrice.mean()
 
+    def daily_settlement(self, i_date):
+        self.cash_position[i_date + 1] = self.cash_position[i_date] + self.cash_position_taken[i_date]
+        self.tickers_positions[i_date + 1] = self.tickers_positions[i_date] + self.tickers_positions_taken[i_date]
+        tickerTtlValue = 0
+        for iTicker in self.ticker2index:
+            ind_iTicker = self.ticker2index[iTicker]
+            if self.allTickersDailyCloseNP[i_date][ind_iTicker] == None:
+                if self.tickers_positions[i_date + 1][ind_iTicker] != 0:
+                    print('Fatal data missing for ' + iTicker + ' on ' + str(self.calendar[i_date]) + ', position neglected.')
+            elif np.isnan(self.allTickersDailyCloseNP[i_date][ind_iTicker]):
+                if self.tickers_positions[i_date + 1][ind_iTicker] != 0:
+                    print('Fatal data missing for ' + iTicker + ' on ' + str(self.calendar[i_date]) + ', position neglected.')
+            else:
+                tickerTtlValue += self.allTickersDailyCloseNP[i_date][ind_iTicker]*self.tickers_positions[i_date + 1][ind_iTicker]
+        self.total_position[i_date + 1] = tickerTtlValue + self.cash_position[i_date + 1]
+
     def write_log(self, log):
 
         with open('backtest.log', 'a') as handle:
             handle.write(str(datetime.datetime.now()) + ": " + log + "\n")
 
+class Strategy():
+    def __init__(self):
+        pass
+    def run(self, i_date):
+        return [{"ticker": "AAP", "nshares": 20, "start_time": "10:00:00", "end_time": "16:00:00"}, {"ticker": "YUM", "nshares": -10, "start_time": "10:00:00", "end_time": "16:00:00"}]
 
 a = MyBacktestEngine()
 a.create_calendar('2015-01-01', '2017-01-01')
 a.load_daily_close()
 a.initialize_positions(1000000)
-a.place_orders_batch(0, orderBatchSample, use_minute_data=False)
-a.get_minute_mean('AAP', '2015-01-02', '09:00:00', '2015-01-02', '16:00:00')
+a.run()
 a.allTickersDailyCloseDF.to_csv("/home/frank/Desktop/test.csv")
