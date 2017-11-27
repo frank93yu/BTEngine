@@ -27,6 +27,7 @@ def get_ticker_universe(path='./allTickers.csv'):
     tickerList = np.array([iTicker.split()[0] for iTicker in tempTickerList])
     return tickerList
 
+orderBatchSample = [{"ticker": "AAP", "nshares": 20, "start_time": "10:00:00", "end_time": "16:00:00"}, {"ticker": "YUM", "nshares": -10, "start_time": "10:00:00", "end_time": "16:00:00"}]
 
 class MyBacktestEngine():
     # the backtest engine
@@ -47,6 +48,9 @@ class MyBacktestEngine():
         # initialized in initialize_positions method
         self.cash_position, self.total_position = None, None # np array containing cash postion series
         self.tickers_positions = None # np array containing tickers' postions serieses
+        self.cash_position_taken = None # np array containing cash position taken
+        self.tickers_positions_taken = None # np array containing tickers' positions taken
+
 
     def create_calendar(self, start_date, end_date, benchmark_ticker='SPY'):
         # using the dates available for benchmark to create a gobal trading calendar
@@ -120,6 +124,24 @@ class MyBacktestEngine():
         for iDate in range(len(self.calendar)):
             pass
 
+    def place_orders_batch(self, i_date, order_batch, use_minute_data=False):
+        for iOrder in order_batch:
+            iTicker = iOrder['ticker']
+            iOrderAmount = iOrder['nshares']
+            if not use_minute_data:
+                iCost = self.allTickersDailyCloseNP[i_date][self.ticker2index[iTicker]]
+            else:
+                iStartTime = iOrder['start_time']
+                iEndTime = iOrder['end_time']
+                iCost = self.get_minute_mean(iTicker, str(self.calendar[i_date]), '09:00:00', str(self.calendar[i_date]), '16:00:00')
+
+
+    def get_minute_mean(self, ticker, start_date, start_time, end_date, end_time):
+        self.minutePriceDB.query_by_datetime({'ticker': ticker, 'start_date': start_date, 'start_time': start_time, \
+            'end_date': end_date, 'end_time': end_time, 'datatypes': ['close']})
+        minuteClosePrice = np.array([close for close in self.minutePriceDB.cursor])
+        return minuteClosePrice.mean()
+
     def write_log(self, log):
 
         with open('backtest.log', 'a') as handle:
@@ -130,4 +152,6 @@ a = MyBacktestEngine()
 a.create_calendar('2015-01-01', '2017-01-01')
 a.load_daily_close()
 a.initialize_positions(1000000)
+a.place_orders_batch(0, orderBatchSample, use_minute_data=False)
+a.get_minute_mean('AAP', '2015-01-02', '09:00:00', '2015-01-02', '16:00:00')
 a.allTickersDailyCloseDF.to_csv("/home/frank/Desktop/test.csv")
