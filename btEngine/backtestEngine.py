@@ -51,6 +51,8 @@ class MyBacktestEngine():
         self.cash_position_taken = None # np array containing cash position taken
         self.tickers_positions_taken = None # np array containing tickers' positions taken
 
+        self.all_trades = []
+
 
     def create_calendar(self, start_date, end_date, benchmark_ticker='SPY'):
         # using the dates available for benchmark to create a gobal trading calendar
@@ -130,8 +132,18 @@ class MyBacktestEngine():
             iOrderBatch = dailyStrategy.run(self.calendar[iDate])
             self.place_orders_batch(iDate, iOrderBatch)
             self.daily_settlement(iDate)
-        temp = pd.DataFrame(self.tickers_positions)
-        temp.to_csv("~/Desktop/wtf.csv")
+        self.summary()
+
+    def summary(self):
+
+        self.PnL = pd.DataFrame([self.calendar, list(self.total_position)[1:]])
+        self.PnL = self.PnL.transpose()
+        self.PnL.columns = ['date', 'PnL']
+        self.PnL['return'] = self.PnL['PnL'].pct_change()
+        self.PnL.to_csv("../summary/PnL.csv")
+        self.all_trades = pd.DataFrame(self.all_trades)
+        self.all_trades.columns = ['date', 'ticker', 'price', 'volume']
+        self.all_trades.to_csv("../summary/TradeLog.csv")
 
     def place_orders_batch(self, i_date, order_batch, use_minute_data=False):
 
@@ -157,6 +169,7 @@ class MyBacktestEngine():
                 iOrderAmount = iOrderAmount*self.cash_position[i_date]/iCost
             self.cash_position_taken[i_date] -= iCost*iOrderAmount
             self.tickers_positions_taken[i_date][self.ticker2index[iTicker]] += iOrderAmount
+            self.all_trades.append([self.calendar[i_date], iTicker, iCost, str(iOrderAmount)])
             print(str(self.calendar[i_date]) + ': ' + str(iOrderAmount) + ' shares of ' + iTicker + ' at ' + str(iCost) + '.')
             self.write_log(str(self.calendar[i_date]) + ': ' + str(iOrderAmount) + ' shares of ' + iTicker + ' at ' + str(iCost) + '.')
 
@@ -191,7 +204,7 @@ class MyBacktestEngine():
 class Strategy(MyBacktestEngine):
     def __init__(self):
         MyBacktestEngine.__init__(self)
-        self.subRevSignals = pd.DataFrame.from_csv("/media/trinnacle/86C6-B046/BTEngineTrinnacle/subRevStrategy/oneday_subRevSignalBT10percent.csv")
+        self.subRevSignals = pd.DataFrame.from_csv("/media/trinnacle/86C6-B046/BTEngineTrinnacle/subRevStrategy/bef_subRevSignalBT.csv")
     def run(self, i_date):
         self.subRevSignals['date'] = pd.to_datetime(self.subRevSignals['date'], format="%Y-%m-%d")
         thisBatch = self.subRevSignals[self.subRevSignals['date'] <= i_date]
@@ -210,7 +223,7 @@ class Strategy(MyBacktestEngine):
 # strategy.run(pd.to_datetime('2016-01-01', format="%Y-%m-%d"))
 
 a = MyBacktestEngine()
-a.create_calendar('2015-01-01', '2017-08-01')
+a.create_calendar('2015-04-01', '2017-08-01')
 a.load_daily_close()
 a.initialize_positions(1000000)
 strategy = Strategy()
