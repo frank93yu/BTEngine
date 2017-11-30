@@ -9,31 +9,33 @@ from dbAPI import MyDBApi_GeoMinute
 import numpy as np
 import pandas as pd
 import datetime
+import time
 
 def initialize_DB_connection():
     # establish database connection for daily and minute data
-    minutePriceDB = MyDBApi_GeoMinute({'user': 'root', 'password': 'trinnacle17',\
+    minutePriceDB = MyDBApi_GeoMinute({'user': 'root', 'password': '933900',\
         'host': '127.0.0.1', 'database': 'GeoTickersMinute15_17',})
     minutePriceDB.connect()
-    dailyPriceDB = MyDBApi_GeoDaily({'user': 'root', 'password': 'trinnacle17',\
+    dailyPriceDB = MyDBApi_GeoDaily({'user': 'root', 'password': '933900',\
         'host': '127.0.0.1', 'database': 'GeoTickersDaily15_17',})
     dailyPriceDB.connect()
-    return dailyPriceDB, minutePriceDB
+    dailyBetaSPYDB = MyDBApi_GeoDaily({'user': 'root', 'password': '933900',\
+        'host': '127.0.0.1', 'database': 'GeoTickersBetaSPY15_17',})
+    dailyBetaSPYDB.connect()
+    return dailyPriceDB, minutePriceDB, dailyBetaSPYDB
 
-def get_ticker_universe(path='/media/trinnacle/86C6-B046/BTEngineTrinnacle/btEngine/allTickers.csv'):
+def get_ticker_universe(path='/media/frank/SharedDisk/BTEngine/btEngine/allTickers.csv'):
     # get all the tickers in the backtest universe
     tempTickerList = pd.DataFrame.from_csv(path)
     tempTickerList = list(tempTickerList.index.values)
     tickerList = np.array([iTicker.split()[0] for iTicker in tempTickerList])
     return tickerList
 
-orderBatchSample = [{"ticker": "AAP", "nshares": 20, "start_time": "10:00:00", "end_time": "16:00:00"}, {"ticker": "YUM", "nshares": -10, "start_time": "10:00:00", "end_time": "16:00:00"}]
-
 class MyBacktestEngine():
     # the backtest engine
     def __init__(self):
         self.write_log("New back-test created!----------------------------------------------------\n")
-        self.dailyPriceDB, self.minutePriceDB = initialize_DB_connection()
+        self.dailyPriceDB, self.minutePriceDB, self.dailyBetaSPYDB = initialize_DB_connection()
         self.ticker_universe = get_ticker_universe() # np.array of strings, containing all the tickers relevant
 
         # initialized in create_calendar method
@@ -124,6 +126,7 @@ class MyBacktestEngine():
 
     def run(self, dailyStrategy):
         # iterate through the calendar
+        timeStart = time.time()
         for iDate in range(len(self.calendar)):
             print('---------------' + str(self.calendar[iDate]) + '--------------')
             print('cash:' + str(self.cash_position[iDate]))
@@ -132,7 +135,10 @@ class MyBacktestEngine():
             iOrderBatch = dailyStrategy.run(self.calendar[iDate])
             self.place_orders_batch(iDate, iOrderBatch)
             self.daily_settlement(iDate)
+            self.beta_hedge(iDate)
+            self.daily_settlement(iDate)
         self.summary()
+        print("Time elapsed: ", time.time() - timeStart)
 
     def summary(self):
 
@@ -171,7 +177,7 @@ class MyBacktestEngine():
             self.tickers_positions_taken[i_date][self.ticker2index[iTicker]] += iOrderAmount
             self.all_trades.append([self.calendar[i_date], iTicker, iCost, str(iOrderAmount)])
             print(str(self.calendar[i_date]) + ': ' + str(iOrderAmount) + ' shares of ' + iTicker + ' at ' + str(iCost) + '.')
-            self.write_log(str(self.calendar[i_date]) + ': ' + str(iOrderAmount) + ' shares of ' + iTicker + ' at ' + str(iCost) + '.')
+            # self.write_log(str(self.calendar[i_date]) + ': ' + str(iOrderAmount) + ' shares of ' + iTicker + ' at ' + str(iCost) + '.')
 
     def get_minute_mean(self, ticker, start_date, start_time, end_date, end_time):
         self.minutePriceDB.query_by_datetime({'ticker': ticker, 'start_date': start_date, 'start_time': start_time, \
@@ -195,16 +201,62 @@ class MyBacktestEngine():
                 tickerTtlValue += self.allTickersDailyCloseNP[i_date][ind_iTicker]*self.tickers_positions[i_date + 1][ind_iTicker]
         self.total_position[i_date + 1] = tickerTtlValue + self.cash_position[i_date + 1]
 
+    def beta_hedge(self, i_date, ticker="SPY"):
+        last_hedge_position = self.tickers_positions[i_date][self.ticker2index[ticker]]
+        this_hedge_position = 0
+        # generate hedging positions
+        datestr = str(self.calendar[i_date])
+        for iTicker in self.ticker2index:
+
+            iTickerPosition = self.tickers_positions[i_date + 1][self.ticker2index[iTicker]]
+            if iTickerPosition == 0:
+                continue
+
+            self.dailyBetaSPYDB.query_by_date({'ticker': ticker, 'start_date': datestr, 'end_date': datestr, 'datatypes':['beta_SPY']})
+            iBeta = [beta for beta in self.dailyBetaSPYDB.cursor]
+            if iBeta == []:
+                print("Beta value for " + ticker + " on " + datestr + " is not available!")
+            else:
+                iBeta = iBeta[0][0]
+            if iBeta == None:
+                print("Beta value for " + ticker + " on " + datestr + " is not available!")
+            elif np.isnan(iBeta):
+                print("Beta value for " + ticker + " on " + datestr + " is not available!")
+
+            iTickerClose = self.allTickersDailyCloseNP[i_date][self.ticker2index[iTicker]]
+            if iTickerClose == None:
+                print("Close price for " + ticker + " on " + datestr + " is not available, Hedging failed!")
+            elif np.isnan(iTickerClose):
+                print("Close price for " + ticker + " on " + datestr + " is not available, Hedging failed!")
+
+            hedgingTickerClose = self.allTickersDailyCloseNP[i_date][self.ticker2index[ticker]]
+            if hedgingTickerClose == None:
+                print("Close price for " + ticker + " on " + datestr + " is not available, Hedging failed!")
+            elif np.isnan(hedgingTickerClose):
+                print("Close price for " + ticker + " on " + datestr + " is not available, Hedging failed!")
+
+            print(iTickerPosition, iBeta)
+            iTickerCashPosition = iTickerPosition*iTickerClose
+            hedgingTickerCashPosition = -iBeta*iTickerCashPosition
+            hedgingTickerPosition = hedgingTickerCashPosition/hedgingTickerClose
+
+            this_hedge_position += hedgingTickerPosition
+
+        hedge_position_taken = this_hedge_position - last_hedge_position
+        hedge_order = [{'ticker': ticker, 'volume': hedge_position_taken, "start_time": "10:00:00", "end_time": "16:00:00", "use_weight": False}]
+        print(str(self.calendar[i_date]) + ': ' + str(hedge_position_taken) + ' shares of ' + ticker + ' is taken for hedging.')
+        return hedge_order
+
     def write_log(self, log):
 
         with open('backtest.log', 'a') as handle:
             handle.write(str(datetime.datetime.now()) + ": " + log + "\n")
 
 
-class Strategy(MyBacktestEngine):
+class Strategy():
+
     def __init__(self):
-        MyBacktestEngine.__init__(self)
-        self.subRevSignals = pd.DataFrame.from_csv("/media/trinnacle/86C6-B046/BTEngineTrinnacle/subRevStrategy/bef_subRevSignalBT.csv")
+        self.subRevSignals = pd.DataFrame.from_csv("/media/frank/SharedDisk/BTEngine/subRevStrategy/bef_subRevSignalBT.csv")
     def run(self, i_date):
         self.subRevSignals['date'] = pd.to_datetime(self.subRevSignals['date'], format="%Y-%m-%d")
         thisBatch = self.subRevSignals[self.subRevSignals['date'] <= i_date]
