@@ -135,7 +135,8 @@ class MyBacktestEngine():
             iOrderBatch = dailyStrategy.run(self.calendar[iDate])
             self.place_orders_batch(iDate, iOrderBatch)
             self.daily_settlement(iDate)
-            self.beta_hedge(iDate)
+            iHedgeOrder = self.beta_hedge(iDate)
+            self.place_orders_batch(iDate, iHedgeOrder)
             self.daily_settlement(iDate)
         self.summary()
         print("Time elapsed: ", time.time() - timeStart)
@@ -150,6 +151,10 @@ class MyBacktestEngine():
         self.all_trades = pd.DataFrame(self.all_trades)
         self.all_trades.columns = ['date', 'ticker', 'price', 'volume']
         self.all_trades.to_csv("../summary/TradeLog.csv")
+        positionBook = pd.DataFrame(self.tickers_positions)
+        positionBook.columns = [ticker for ticker in self.ticker2index]
+        positionBook.index = ['start'] + [date for date in self.calendar]
+        positionBook.to_csv("../summary/PositionBook.csv")
 
     def place_orders_batch(self, i_date, order_batch, use_minute_data=False):
 
@@ -208,6 +213,9 @@ class MyBacktestEngine():
         datestr = str(self.calendar[i_date])
         for iTicker in self.ticker2index:
 
+            if iTicker == ticker:
+                continue
+
             iTickerPosition = self.tickers_positions[i_date + 1][self.ticker2index[iTicker]]
             if iTickerPosition == 0:
                 continue
@@ -235,7 +243,6 @@ class MyBacktestEngine():
             elif np.isnan(hedgingTickerClose):
                 print("Close price for " + ticker + " on " + datestr + " is not available, Hedging failed!")
 
-            print(iTickerPosition, iBeta)
             iTickerCashPosition = iTickerPosition*iTickerClose
             hedgingTickerCashPosition = -iBeta*iTickerCashPosition
             hedgingTickerPosition = hedgingTickerCashPosition/hedgingTickerClose
@@ -243,6 +250,7 @@ class MyBacktestEngine():
             this_hedge_position += hedgingTickerPosition
 
         hedge_position_taken = this_hedge_position - last_hedge_position
+        print("thisHedge: " + str(this_hedge_position))
         hedge_order = [{'ticker': ticker, 'volume': hedge_position_taken, "start_time": "10:00:00", "end_time": "16:00:00", "use_weight": False}]
         print(str(self.calendar[i_date]) + ': ' + str(hedge_position_taken) + ' shares of ' + ticker + ' is taken for hedging.')
         return hedge_order
@@ -256,7 +264,7 @@ class MyBacktestEngine():
 class Strategy():
 
     def __init__(self):
-        self.subRevSignals = pd.DataFrame.from_csv("/media/frank/SharedDisk/BTEngine/subRevStrategy/bef_subRevSignalBT.csv")
+        self.subRevSignals = pd.DataFrame.from_csv("/media/frank/SharedDisk/BTEngine/subRevStrategy/oneday_subRevSignalBT10percent.csv")
     def run(self, i_date):
         self.subRevSignals['date'] = pd.to_datetime(self.subRevSignals['date'], format="%Y-%m-%d")
         thisBatch = self.subRevSignals[self.subRevSignals['date'] <= i_date]
