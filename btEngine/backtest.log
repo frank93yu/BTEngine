@@ -22782,3 +22782,321 @@
 2017-11-30 11:11:05.301885: Daily data is loaded successfully.
 
 2017-11-30 11:11:05.304555: Cash position initialized with 1000000.
+2017-12-02 12:47:34.304977: New back-test created!----------------------------------------------------
+
+2017-12-02 12:47:58.597490: New back-test created!----------------------------------------------------
+
+2017-12-02 12:49:24.869393: New back-test created!----------------------------------------------------
+
+2017-12-02 12:49:24.929768: Calendar created on trading days from 2015-04-01 to 2017-08-01.
+
+2017-12-02 12:49:25.355055: Data for BF not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 12:49:25.474097: Data for BMW not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 12:49:25.820624: Data for COH not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 12:49:25.886992: Data for DAI not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 12:49:27.235840: Data for LTD not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 12:49:28.162642: Data for SCSS not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 12:49:29.382364: Daily data is loaded successfully.
+
+2017-12-02 12:49:29.384099: Cash position initialized with 1000000.
+2017-12-02 12:50:38.422069: New back-test created!----------------------------------------------------
+
+2017-12-02 12:50:38.441565: Calendar created on trading days from 2015-04-01 to 2017-08-01.
+
+2017-12-02 12:50:38.814088: Data for BF not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 12:50:38.940896: Data for BMW not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 12:50:39.308392: Data for COH not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 12:50:39.375173: Data for DAI not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 12:50:40.717531: Data for LTD not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 12:50:41.652219: Data for SCSS not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 12:50:42.895692: Daily data is loaded successfully.
+
+2017-12-02 12:50:42.897067: Cash position initialized with 1000000.
+2017-12-02 13:07:01.374516: New back-test created!----------------------------------------------------
+
+2017-12-02 13:07:01.395054: Calendar created on trading days from 2015-04-01 to 2017-08-01.
+
+2017-12-02 13:07:01.775633: Data for BF not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 13:07:01.902447: Data for BMW not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 13:07:02.270426: Data for COH not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 13:07:02.340505: Data for DAI not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 13:07:04.021077: Data for LTD not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 13:07:05.011597: Data for SCSS not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 13:07:06.182261: Daily data is loaded successfully.
+
+2017-12-02 13:07:06.183771: Cash position initialized with 1000000.
+2017-12-02 14:07:08.194517: New back-test created!----------------------------------------------------
+
+2017-12-02 14:07:08.214647: Calendar created on trading days from 2015-04-01 to 2017-08-01.
+
+2017-12-02 14:07:08.566862: Data for BF not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 14:07:08.683858: Data for BMW not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 14:07:09.024664: Data for COH not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 14:07:09.089406: Data for DAI not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 14:07:10.408204: Data for LTD not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 14:07:11.326716: Data for SCSS not available for time frame: 2015-04-01 to 2017-08-01.
+2017-12-02 14:07:12.473264: Daily data is loaded successfully.
+
+2017-12-02 14:07:12.474687: Cash position initialized with 1000000.
+2017-12-02 14:09:18.559876: New back-test created!----------------------------------------------------
+
+2017-12-02 14:09:18.589358: Calendar created on trading days from 2013-01-02 to 2017-08-01.
+
+2017-12-02 14:09:19.243906: Data for BF not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:09:19.465765: Data for BMW not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:09:20.064687: Data for COH not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:09:20.175445: Data for DAI not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:09:22.503763: Data for LTD not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:09:24.064153: Data for SCSS not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:09:26.017653: Daily data is loaded successfully.
+
+2017-12-02 14:09:26.019791: Cash position initialized with 1000000.
+2017-12-02 14:11:24.449561: New back-test created!----------------------------------------------------
+
+2017-12-02 14:11:24.478573: Calendar created on trading days from 2013-01-02 to 2017-08-01.
+
+2017-12-02 14:11:25.128746: Data for BF not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:11:25.342774: Data for BMW not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:11:25.967966: Data for COH not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:11:26.082621: Data for DAI not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:11:28.411295: Data for LTD not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:11:29.980096: Data for SCSS not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:11:31.950703: Daily data is loaded successfully.
+
+2017-12-02 14:11:31.952979: Cash position initialized with 1000000.
+2017-12-02 14:14:24.331351: New back-test created!----------------------------------------------------
+
+2017-12-02 14:14:24.360143: Calendar created on trading days from 2013-01-02 to 2017-08-01.
+
+2017-12-02 14:14:25.007071: Data for BF not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:14:25.222667: Data for BMW not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:14:25.826504: Data for COH not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:14:25.939126: Data for DAI not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:14:28.291617: Data for LTD not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:14:29.891679: Data for SCSS not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:14:31.891278: Daily data is loaded successfully.
+
+2017-12-02 14:14:31.893426: Cash position initialized with 1000000.
+2017-12-02 14:14:58.572595: New back-test created!----------------------------------------------------
+
+2017-12-02 14:14:58.600985: Calendar created on trading days from 2013-01-02 to 2017-08-01.
+
+2017-12-02 14:14:59.241085: Data for BF not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:14:59.448672: Data for BMW not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:15:00.045040: Data for COH not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:15:00.157070: Data for DAI not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:15:02.479452: Data for LTD not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:15:04.063982: Data for SCSS not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:15:06.031311: Daily data is loaded successfully.
+
+2017-12-02 14:15:06.033460: Cash position initialized with 1000000.
+2017-12-02 14:29:12.924420: New back-test created!----------------------------------------------------
+
+2017-12-02 14:29:12.952610: Calendar created on trading days from 2013-01-02 to 2017-08-01.
+
+2017-12-02 14:29:13.590468: Data for BF not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:29:13.797937: Data for BMW not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:29:14.393036: Data for COH not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:29:14.505072: Data for DAI not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:29:16.837100: Data for LTD not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:29:18.407232: Data for SCSS not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:29:20.379471: Daily data is loaded successfully.
+
+2017-12-02 14:29:20.384802: Cash position initialized with 1000000.
+2017-12-02 14:30:42.992308: New back-test created!----------------------------------------------------
+
+2017-12-02 14:30:43.023089: Calendar created on trading days from 2013-01-02 to 2017-08-01.
+
+2017-12-02 14:30:43.663503: Data for BF not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:30:43.871584: Data for BMW not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:30:44.470945: Data for COH not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:30:44.583329: Data for DAI not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:30:46.913697: Data for LTD not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:30:48.485575: Data for SCSS not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:30:50.453998: Daily data is loaded successfully.
+
+2017-12-02 14:30:50.456190: Cash position initialized with 1000000.
+2017-12-02 14:39:49.238532: New back-test created!----------------------------------------------------
+
+2017-12-02 14:39:49.267699: Calendar created on trading days from 2013-01-02 to 2017-08-01.
+
+2017-12-02 14:39:49.920074: Data for BF not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:39:50.133993: Data for BMW not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:39:50.756348: Data for COH not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:39:50.873822: Data for DAI not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:39:53.166849: Data for LTD not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:39:54.705283: Data for SCSS not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:39:56.609679: Daily data is loaded successfully.
+
+2017-12-02 14:39:56.611908: Cash position initialized with 1000000.
+2017-12-02 14:41:07.141965: New back-test created!----------------------------------------------------
+
+2017-12-02 14:41:07.170914: Calendar created on trading days from 2013-01-02 to 2017-08-01.
+
+2017-12-02 14:41:07.822480: Data for BF not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:41:08.031329: Data for BMW not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:41:08.623691: Data for COH not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:41:08.734008: Data for DAI not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:41:11.100639: Data for LTD not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:41:12.707239: Data for SCSS not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:41:14.704233: Daily data is loaded successfully.
+
+2017-12-02 14:41:14.706469: Cash position initialized with 1000000.
+2017-12-02 14:42:39.169896: New back-test created!----------------------------------------------------
+
+2017-12-02 14:42:39.199205: Calendar created on trading days from 2013-01-02 to 2017-08-01.
+
+2017-12-02 14:42:39.862073: Data for BF not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:42:40.079146: Data for BMW not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:42:40.692390: Data for COH not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:42:40.808031: Data for DAI not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:42:43.204548: Data for LTD not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:42:44.807864: Data for SCSS not available for time frame: 2013-01-02 to 2017-08-01.
+2017-12-02 14:42:46.822399: Daily data is loaded successfully.
+
+2017-12-02 14:42:46.824571: Cash position initialized with 1000000.
+2017-12-02 14:45:10.721126: New back-test created!----------------------------------------------------
+
+2017-12-02 14:45:10.751495: Calendar created on trading days from 2013-01-02 to 2017-09-29.
+
+2017-12-02 14:45:11.426869: Data for BF not available for time frame: 2013-01-02 to 2017-09-29.
+2017-12-02 14:45:11.647024: Data for BMW not available for time frame: 2013-01-02 to 2017-09-29.
+2017-12-02 14:45:12.274101: Data for COH not available for time frame: 2013-01-02 to 2017-09-29.
+2017-12-02 14:45:12.389377: Data for DAI not available for time frame: 2013-01-02 to 2017-09-29.
+2017-12-02 14:45:14.813028: Data for LTD not available for time frame: 2013-01-02 to 2017-09-29.
+2017-12-02 14:45:16.458615: Data for SCSS not available for time frame: 2013-01-02 to 2017-09-29.
+2017-12-02 14:45:18.541495: Daily data is loaded successfully.
+
+2017-12-02 14:45:18.543957: Cash position initialized with 1000000.
+2017-12-02 14:46:43.202934: New back-test created!----------------------------------------------------
+
+2017-12-02 14:46:43.244763: Calendar created on trading days from 2013-01-02 to 2017-11-30.
+
+2017-12-02 14:46:43.953383: Data for BF not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 14:46:44.193614: Data for BMW not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 14:46:44.970114: Data for DAI not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 14:46:47.482226: Data for LTD not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 14:46:49.171386: Data for SCSS not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 14:46:51.273323: Daily data is loaded successfully.
+
+2017-12-02 14:46:51.275697: Cash position initialized with 1000000.
+2017-12-02 15:50:23.660803: New back-test created!----------------------------------------------------
+
+2017-12-02 15:50:23.881394: Calendar created on trading days from 2013-01-02 to 2017-11-30.
+
+2017-12-02 15:50:24.712128: Data for BF not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 15:50:24.943458: Data for BMW not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 15:50:25.805688: Data for DAI not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 15:50:28.696279: Data for LTD not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 15:50:30.626345: Data for SCSS not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 15:50:32.932300: Daily data is loaded successfully.
+
+2017-12-02 15:50:32.935554: Cash position initialized with 1000000.
+2017-12-02 15:51:35.680776: New back-test created!----------------------------------------------------
+
+2017-12-02 15:51:35.711571: Calendar created on trading days from 2013-01-02 to 2017-11-30.
+
+2017-12-02 15:51:36.418957: Data for BF not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 15:51:36.654595: Data for BMW not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 15:51:37.461263: Data for DAI not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 15:51:40.038067: Data for LTD not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 15:51:41.776254: Data for SCSS not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 15:51:43.946340: Daily data is loaded successfully.
+
+2017-12-02 15:51:43.948436: Cash position initialized with 1000000.
+2017-12-02 16:04:34.474380: New back-test created!----------------------------------------------------
+
+2017-12-02 16:04:34.504276: Calendar created on trading days from 2013-01-02 to 2017-11-30.
+
+2017-12-02 16:04:35.181032: Data for BF not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:04:35.402324: Data for BMW not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:04:36.170036: Data for DAI not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:04:38.637728: Data for LTD not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:04:40.311383: Data for SCSS not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:04:42.404626: Daily data is loaded successfully.
+
+2017-12-02 16:04:42.406847: Cash position initialized with 1000000.
+2017-12-02 16:05:10.657592: New back-test created!----------------------------------------------------
+
+2017-12-02 16:05:10.688791: Calendar created on trading days from 2013-01-02 to 2017-11-30.
+
+2017-12-02 16:05:11.410234: Data for BF not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:05:11.648686: Data for BMW not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:05:12.442571: Data for DAI not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:05:14.989576: Data for LTD not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:05:16.725470: Data for SCSS not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:05:18.890604: Daily data is loaded successfully.
+
+2017-12-02 16:05:18.892700: Cash position initialized with 1000000.
+2017-12-02 16:10:29.137360: New back-test created!----------------------------------------------------
+
+2017-12-02 16:10:29.167580: Calendar created on trading days from 2013-01-02 to 2017-11-30.
+
+2017-12-02 16:10:29.856108: Data for BF not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:10:30.082990: Data for BMW not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:10:30.873712: Data for DAI not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:10:33.400195: Data for LTD not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:10:35.106178: Data for SCSS not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:10:37.245939: Daily data is loaded successfully.
+
+2017-12-02 16:10:37.247994: Cash position initialized with 1000000.
+2017-12-02 16:54:19.284033: New back-test created!----------------------------------------------------
+
+2017-12-02 16:54:19.314981: Calendar created on trading days from 2013-01-02 to 2017-11-30.
+
+2017-12-02 16:54:20.006227: Data for BF not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:54:20.234333: Data for BMW not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:54:21.020475: Data for DAI not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:54:23.523888: Data for LTD not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:54:25.222051: Data for SCSS not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:54:27.360344: Daily data is loaded successfully.
+
+2017-12-02 16:54:27.362557: Cash position initialized with 1000000.
+2017-12-02 16:59:03.599770: New back-test created!----------------------------------------------------
+
+2017-12-02 16:59:03.645409: Calendar created on trading days from 2013-01-02 to 2017-11-30.
+
+2017-12-02 16:59:04.360008: Data for BF not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:59:04.587040: Data for BMW not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:59:05.379457: Data for DAI not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:59:07.916923: Data for LTD not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:59:09.636298: Data for SCSS not available for time frame: 2013-01-02 to 2017-11-30.
+2017-12-02 16:59:11.778701: Daily data is loaded successfully.
+
+2017-12-02 16:59:11.780846: Cash position initialized with 1000000.
+2017-12-02 17:00:30.058340: New back-test created!----------------------------------------------------
+
+2017-12-02 17:00:30.079421: Calendar created on trading days from 2015-03-02 to 2017-11-30.
+
+2017-12-02 17:00:30.492166: Data for BF not available for time frame: 2015-03-02 to 2017-11-30.
+2017-12-02 17:00:30.630633: Data for BMW not available for time frame: 2015-03-02 to 2017-11-30.
+2017-12-02 17:00:31.103084: Data for DAI not available for time frame: 2015-03-02 to 2017-11-30.
+2017-12-02 17:00:32.654952: Data for LTD not available for time frame: 2015-03-02 to 2017-11-30.
+2017-12-02 17:00:33.717719: Data for SCSS not available for time frame: 2015-03-02 to 2017-11-30.
+2017-12-02 17:00:35.038964: Daily data is loaded successfully.
+
+2017-12-02 17:00:35.040332: Cash position initialized with 1000000.
+2017-12-02 17:07:35.969166: New back-test created!----------------------------------------------------
+
+2017-12-02 17:07:35.990448: Calendar created on trading days from 2015-03-02 to 2017-11-30.
+
+2017-12-02 17:07:36.404455: Data for BF not available for time frame: 2015-03-02 to 2017-11-30.
+2017-12-02 17:07:36.545249: Data for BMW not available for time frame: 2015-03-02 to 2017-11-30.
+2017-12-02 17:07:37.023728: Data for DAI not available for time frame: 2015-03-02 to 2017-11-30.
+2017-12-02 17:07:38.597995: Data for LTD not available for time frame: 2015-03-02 to 2017-11-30.
+2017-12-02 17:07:39.681624: Data for SCSS not available for time frame: 2015-03-02 to 2017-11-30.
+2017-12-02 17:07:41.031710: Daily data is loaded successfully.
+
+2017-12-02 17:07:41.033232: Cash position initialized with 1000000.
+2017-12-02 17:39:53.446474: New back-test created!----------------------------------------------------
+
+2017-12-02 17:39:53.468021: Calendar created on trading days from 2015-03-02 to 2017-11-30.
+
+2017-12-02 17:39:53.884435: Data for BF not available for time frame: 2015-03-02 to 2017-11-30.
+2017-12-02 17:39:54.023163: Data for BMW not available for time frame: 2015-03-02 to 2017-11-30.
+2017-12-02 17:39:54.496994: Data for DAI not available for time frame: 2015-03-02 to 2017-11-30.
+2017-12-02 17:39:56.055539: Data for LTD not available for time frame: 2015-03-02 to 2017-11-30.
+2017-12-02 17:39:57.134874: Data for SCSS not available for time frame: 2015-03-02 to 2017-11-30.
+2017-12-02 17:39:58.476939: Daily data is loaded successfully.
+
+2017-12-02 17:39:58.478394: Cash position initialized with 1000000.
